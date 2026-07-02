@@ -33,7 +33,5 @@ public class WorkGiver_Scanner_GetPriority
         {
             __result += priority;
         }
-
-        Log.Message($"Overriding priority for {__instance} for {pawn} to {__result}");
     }
 }
