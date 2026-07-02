@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>[Abandoned] Prioritize (Continued)</name>
-  <packageId>Mlie.Prioritize</packageId>
+  <name>Prioritize (Continued)</name>
+  <packageId>philip2p2026.Prioritize</packageId>
   <author>InsertKey</author>
-  <url>https://github.com/emipa606/Prioritize</url>
+  <url>https://github.com/philip2p2026-git/Prioritize</url>
   <supportedVersions>
     <li>1.0</li>
     <li>1.1</li>
@@ -11,6 +11,7 @@
     <li>1.3</li>
     <li>1.4</li>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -26,13 +27,24 @@
   <description>[img]https://img.litet.net/logos/Info.png[/img]
 Update of InsertKeys mod https://steamcommunity.com/sharedfiles/filedetails/?id=1579272031
 
-- Removed the HugsLib dependency from 1.5
+Sourced code from https://github.com/emipa606/Prioritize.git
+
+[h1]Renewer Message[/h1]
+It is one of my idea that going to build. BTW it is already built, and it is way better than my idea. 
+As no other compactable version. Here I renew it compactable to 1.6 via AI. Below desciption I just updated the github link.
+If there is issue fix I might assist, but in future I might not have time to duel with it.
+Therefore highly apperiate if any proper version raise.
+
+Thanks InsertKeys for Creation and Thanks Mile for the kindly renewal!
+
+[*][b]Support the mod:[/b] [url=https://buymeacoffee.com/philip2p2026]Buy Me a Coffee[/url]
+[/list]
 
 [img]https://img.litet.net/logos/Abandoned.png[/img]
 
+[url=https://github.com/philip2p2026-git/Prioritize][img]https://img.litet.net/logos/Github.png[/img][/url]
+
 [table]
-    [tr][td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td] [td][url=https://github.com/emipa606/Prioritize][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
-    [/tr]
     [tr]
         [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
         [td][img]https://img.litet.net/logos/SafeToRemove.png[/img][/td]
@@ -40,6 +52,7 @@ Update of InsertKeys mod https://steamcommunity.com/sharedfiles/filedetails/?id=
 [/table]
 	
 [img]https://img.litet.net/logos/OriginalDescription.png[/img]
+
 [h1]Prioritize many things![/h1]
 
 This mod allows you to set priority in many things.
@@ -101,6 +114,6 @@ Non steam download https://github.com/kpqi5858/Prioritize/releases/tag/v1.1
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3276664162][img]https://img.shields.io/github/v/release/emipa606/Prioritize?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: jobs, prioritization</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3276664162][img]https://img.shields.io/github/v/release/philip2p2026-git/Prioritize?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags: jobs, prioritization</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
 </ModMetaData>
