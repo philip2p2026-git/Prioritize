@@ -4,8 +4,15 @@
 ![Image](https://img.litet.net/logos/Info.png)
 
 Update of InsertKeys mod https://steamcommunity.com/sharedfiles/filedetails/?id=1579272031
+Sourced code from https://github.com/emipa606/Prioritize.git
 
-- Removed the HugsLib dependency from 1.5
+Renewer Message
+It is one of my idea that going to build. BTW it is already built, and it is way better than my idea.
+As no other compactable version. Here I renew it compactable to 1.6 via AI. Below desciption I just updated the github link.
+If there is issue fix I might assist, but in future I might not have time to duel with it.
+Therefore highly apperiate if any proper version raise.
+
+Thanks InsertKeys for Creation and Thanks Mile for the kindly renewal!
 
 ![Image](https://img.litet.net/logos/Abandoned.png)
 	
