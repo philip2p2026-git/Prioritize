@@ -8,6 +8,11 @@ public class WorkGiver_Scanner_Prioritized
 {
     public static bool Prefix(ref bool __result)
     {
+        if (!PriorityState.HasActivePriorities())
+        {
+            return true;
+        }
+
         __result = true;
         return false;
     }

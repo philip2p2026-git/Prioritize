@@ -9,7 +9,7 @@ public class WorkGiver_Scanner_GetPriority
 {
     public static void Postfix(Pawn pawn, TargetInfo t, ref float __result, WorkGiver_Scanner __instance)
     {
-        if (!pawn.IsPlayerControlled)
+        if (!PriorityState.HasActivePriorities() || !pawn.IsPlayerControlled)
         {
             return;
         }
