@@ -8,11 +8,15 @@
   <P_CurrentModVersion>Installierte Mod-Version: {0}</P_CurrentModVersion>
   <P_DesignatorThingLabel>Sache Priorität</P_DesignatorThingLabel>
   <P_DesignatorThingDesc>Priorisierung von Entwürfen, Bezeichnungen usw.</P_DesignatorThingDesc>
-  <P_DesignatorCellLabel>Priorität der Zelle</P_DesignatorCellLabel>
-  <P_DesignatorCellDesc>Setzt Prioritäten bei der Aussaat, den Dingen in dieser Zelle usw.</P_DesignatorCellDesc>
+  <P_DesignatorCellLabel>Auto-Priorität über Zellen</P_DesignatorCellLabel>
+  <P_DesignatorCellDesc>Zellen markieren, um Dingen auf diesen Feldern automatisch Priorität zuzuweisen. Wird periodisch synchronisiert.</P_DesignatorCellDesc>
   <P_ShowPriority>Priorität anzeigen</P_ShowPriority>
-  <P_Cell>Zelle</P_Cell>
+  <P_Cell>Über Zellen</P_Cell>
   <P_Thing>Sache</P_Thing>
+  <P_CellSyncModeTitle>Auto-Priorität über Zellen: Synchronisation</P_CellSyncModeTitle>
+  <P_CellSyncPeriodicOnly>Nur periodisch (~10 Sekunden)</P_CellSyncPeriodicOnly>
+  <P_CellSyncImmediateAndPeriodic>Sofort beim Malen + periodisch (empfohlen)</P_CellSyncImmediateAndPeriodic>
+  <P_CellSyncIntervalTitle>Sync-Intervall (Ticks): {0}</P_CellSyncIntervalTitle>
   <P_Items>Artikel</P_Items>
   <P_Building>Gebäude</P_Building>
   <P_Designations>Bezeichnungen</P_Designations>

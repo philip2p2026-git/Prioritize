@@ -7,11 +7,15 @@
   <P_CurrentModVersion>Installed mod-version: {0}</P_CurrentModVersion>
   <P_DesignatorThingLabel>Thing Priority</P_DesignatorThingLabel>
   <P_DesignatorThingDesc>Prioritizes blueprints, designations, etc.</P_DesignatorThingDesc>
-  <P_DesignatorCellLabel>Cell Priority</P_DesignatorCellLabel>
-  <P_DesignatorCellDesc>Prioritizes sowing, things at that cell, etc.</P_DesignatorCellDesc>
+  <P_DesignatorCellLabel>Auto Priority Above Cells</P_DesignatorCellLabel>
+  <P_DesignatorCellDesc>Paint cells to auto-assign priority to things on those tiles. Synced to thing priority periodically.</P_DesignatorCellDesc>
   <P_ShowPriority>Show priority</P_ShowPriority>
-  <P_Cell>Cell</P_Cell>
+  <P_Cell>Above Cells</P_Cell>
   <P_Thing>Thing</P_Thing>
+  <P_CellSyncModeTitle>Auto priority above cells sync</P_CellSyncModeTitle>
+  <P_CellSyncPeriodicOnly>Periodic only (~10 seconds)</P_CellSyncPeriodicOnly>
+  <P_CellSyncImmediateAndPeriodic>Immediate on paint + periodic (recommended)</P_CellSyncImmediateAndPeriodic>
+  <P_CellSyncIntervalTitle>Sync interval (ticks): {0}</P_CellSyncIntervalTitle>
   <P_Items>Items</P_Items>
   <P_Building>Building</P_Building>
   <P_Designations>Designations</P_Designations>

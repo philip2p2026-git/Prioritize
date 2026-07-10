@@ -8,11 +8,15 @@
   <P_CurrentModVersion>已安装模块版本：{0}</P_CurrentModVersion>
   <P_DesignatorThingLabel>优先事项</P_DesignatorThingLabel>
   <P_DesignatorThingDesc>确定蓝图、指定等的优先次序。</P_DesignatorThingDesc>
-  <P_DesignatorCellLabel>小区优先</P_DesignatorCellLabel>
-  <P_DesignatorCellDesc>确定播种的优先顺序、该单元的优先事项等。</P_DesignatorCellDesc>
+  <P_DesignatorCellLabel>单元格上方自动优先级</P_DesignatorCellLabel>
+  <P_DesignatorCellDesc>绘制单元格以自动为这些格子上的物品分配优先级。定期同步到物品优先级。</P_DesignatorCellDesc>
   <P_ShowPriority>显示优先级</P_ShowPriority>
-  <P_Cell>细胞</P_Cell>
+  <P_Cell>上方单元格</P_Cell>
   <P_Thing>事情</P_Thing>
+  <P_CellSyncModeTitle>单元格上方自动优先级同步</P_CellSyncModeTitle>
+  <P_CellSyncPeriodicOnly>仅定期（约10秒）</P_CellSyncPeriodicOnly>
+  <P_CellSyncImmediateAndPeriodic>绘制时立即同步 + 定期（推荐）</P_CellSyncImmediateAndPeriodic>
+  <P_CellSyncIntervalTitle>同步间隔（ticks）：{0}</P_CellSyncIntervalTitle>
   <P_Items>项目</P_Items>
   <P_Building>建筑</P_Building>
   <P_Designations>名称</P_Designations>

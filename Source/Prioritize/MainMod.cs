@@ -39,12 +39,19 @@ public static class MainMod
             return;
         }
 
+        if (DestroyedThingId.Count == 0)
+        {
+            return;
+        }
+
         foreach (var pair in DestroyedThingId)
         {
             save.ThingPriority.Remove(pair);
+            save.CellSourcedThingIds.Remove(pair);
         }
 
         DestroyedThingId.Clear();
+        PriorityWorkIndex.RebuildAll();
     }
 
     public static void AdjustPriorityMouseControl()

@@ -14,7 +14,10 @@ public class WorkGiver_Scanner_GetPriority
             return;
         }
 
-        var m = pawn.Map ?? t.Map;
+        if (!PriorityWorkIndex.HasPrioritiesFor(__instance, pawn.Map))
+        {
+            return;
+        }
 
         var priority = 0f;
 
@@ -22,8 +25,6 @@ public class WorkGiver_Scanner_GetPriority
         {
             priority += MainMod.save.TryGetThingPriority(t.Thing, out var pri) ? pri + 0.1f : 0;
         }
-
-        priority += PSaveData.GetPriorityMapData(m).GetPriorityAt(t.Cell);
 
         if (PrioritizeMod.Instance.Settings.UseLowerAsHighPriority)
         {

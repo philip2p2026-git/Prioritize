@@ -11,6 +11,6 @@ public static class PriorityState
             return false;
         }
 
-        return MainMod.save.ThingPriority.Count > 0 || PriorityMapData.MapsWithCellPriorities > 0;
+        return MainMod.save.ThingPriority.Count > 0;
     }
 }

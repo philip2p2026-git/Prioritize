@@ -6,11 +6,7 @@ public static class PriorityUtils
 {
     public static float GetPriority(Thing t)
     {
-        float pr = MainMod.save.TryGetThingPriority(t, out var pri) ? pri : 0;
-        if (t.Map != null && t.Position.InBounds(t.Map))
-        {
-            pr += PSaveData.GetPriorityMapData(t.Map).GetPriorityAt(t.Position);
-        }
+        var pr = MainMod.save.TryGetThingPriority(t, out var pri) ? pri : 0;
 
         if (PrioritizeMod.Instance.Settings.UseLowerAsHighPriority)
         {

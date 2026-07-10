@@ -15,6 +15,21 @@ public class PriorityGameComponent : GameComponent
     {
         base.GameComponentTick();
         MainMod.RemoveThingPriorityNow();
+
+        var settings = PrioritizeMod.Instance?.Settings;
+        if (settings == null)
+        {
+            return;
+        }
+
+        var interval = settings.CellSyncIntervalTicks > 0
+            ? settings.CellSyncIntervalTicks
+            : CellToThingSync.DefaultSyncIntervalTicks;
+
+        if (GenTicks.TicksGame % interval == 0)
+        {
+            CellToThingSync.SyncAllMaps();
+        }
     }
 
     public override void GameComponentOnGUI()

@@ -54,6 +54,24 @@ internal class PrioritizeMod : Mod
         listingStandard.CheckboxLabeled("P_UseLowerAsHighPriorityTitle".Translate(),
             ref Settings.UseLowerAsHighPriority,
             "P_UseLowerAsHighPriorityDesc".Translate());
+        listingStandard.GapLine();
+        listingStandard.Label("P_CellSyncModeTitle".Translate());
+        if (listingStandard.RadioButton("P_CellSyncPeriodicOnly".Translate(),
+                Settings.CellSyncMode == CellSyncMode.PeriodicOnly))
+        {
+            Settings.CellSyncMode = CellSyncMode.PeriodicOnly;
+        }
+
+        if (listingStandard.RadioButton("P_CellSyncImmediateAndPeriodic".Translate(),
+                Settings.CellSyncMode == CellSyncMode.ImmediateAndPeriodic))
+        {
+            Settings.CellSyncMode = CellSyncMode.ImmediateAndPeriodic;
+        }
+
+        listingStandard.Gap(12f);
+        listingStandard.Label("P_CellSyncIntervalTitle".Translate(Settings.CellSyncIntervalTicks));
+        Settings.CellSyncIntervalTicks =
+            (int)listingStandard.Slider(Settings.CellSyncIntervalTicks, 60, 3600);
         if (currentVersion != null)
         {
             listingStandard.Gap();

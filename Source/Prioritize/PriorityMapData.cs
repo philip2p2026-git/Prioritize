@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using Verse;
 
 namespace Prioritize;
 
@@ -11,6 +12,7 @@ public class PriorityMapData : MapComponent
     private byte[] griddata;
     private int nonZeroCellCount;
     private int numCells;
+    private readonly HashSet<int> prioritizedCellIndices = [];
     private ushort[] priorityGrid;
 
     public int NonZeroCellCount => nonZeroCellCount;
@@ -52,6 +54,27 @@ public class PriorityMapData : MapComponent
 
         UpdateNonZeroCellCount(oldPri, pri);
         priorityGrid[index] = (ushort)(pri + DefaultGridValue);
+        UpdatePrioritizedCellIndex(index, pri);
+    }
+
+    public IEnumerable<IntVec3> GetPrioritizedCells()
+    {
+        foreach (var index in prioritizedCellIndices)
+        {
+            yield return map.cellIndices.IndexToCell(index);
+        }
+    }
+
+    private void UpdatePrioritizedCellIndex(int index, short pri)
+    {
+        if (pri != 0)
+        {
+            prioritizedCellIndices.Add(index);
+        }
+        else
+        {
+            prioritizedCellIndices.Remove(index);
+        }
     }
 
     public override void FinalizeInit()
@@ -84,6 +107,7 @@ public class PriorityMapData : MapComponent
                 break;
             case LoadSaveMode.PostLoadInit:
                 RecountNonZeroCells();
+                RebuildPrioritizedCellIndices();
                 break;
         }
     }
@@ -132,6 +156,23 @@ public class PriorityMapData : MapComponent
         if (nonZeroCellCount > 0)
         {
             MapsWithCellPriorities++;
+        }
+    }
+
+    private void RebuildPrioritizedCellIndices()
+    {
+        prioritizedCellIndices.Clear();
+        if (priorityGrid == null)
+        {
+            return;
+        }
+
+        for (var i = 0; i < priorityGrid.Length; i++)
+        {
+            if (priorityGrid[i] != DefaultGridValue)
+            {
+                prioritizedCellIndices.Add(i);
+            }
         }
     }
 }

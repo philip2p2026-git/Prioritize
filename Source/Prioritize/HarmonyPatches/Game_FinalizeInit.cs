@@ -18,4 +18,9 @@ public class Game_FinalizeInit
 
         MainMod.save.ClearUnusedThingPriority();
     }
+
+    public static void Postfix()
+    {
+        CellToThingSync.SyncAllMaps();
+    }
 }
