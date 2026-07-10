@@ -99,9 +99,9 @@ Source/Prioritize/
 │
 ├── Designator_Priority_Thing.cs
 ├── Designator_Priority_Cell.cs
-├── Designator_SetPriority.cs
 ├── Designator_PrioritySettings.cs
-├── Dialog_SelectPriority.cs
+├── Designator_PriorityPresets.cs  # Negative / 0 / positive preset architect buttons
+├── PriorityPresetMenu.cs
 ├── PriorityShowConditions.cs  # Thing filter presets for thing designator
 ├── PriorityDrawMode.cs        # Overlay: None / Thing / Cell
 │
@@ -133,14 +133,20 @@ Languages/*/Keyed/          # UI strings (English, Korean, …)
 
 ### Architect tab (designation order)
 
-Settings → Set Priority → Thing Priority → Auto Priority Above Cells
+Settings → −preset → 0 → +preset → Thing Priority → Auto Priority Above Cells
 
 | Designator | Action |
 |------------|--------|
-| **Priority Settings** | Thing filter menu (blueprints, haulables, designations, …) |
-| **Set Priority** | Opens numeric dialog, or resets to 0 when a priority designator is active |
+| **Priority Settings** | Thing filter menu (blueprints, haulables, designations, …); highlights matching things on the map while selected |
+| **Negative preset** | Left-click applies negative preset (default −3); right-click picks −1…−5 (saved in mod settings) |
+| **0** | Sets selected priority to 0 |
+| **Positive preset** | Left-click applies positive preset (default +3); right-click picks +1…+5 (saved in mod settings) |
 | **Thing Priority** | Click/drag things to assign priority |
 | **Auto Priority Above Cells** | Paint cells; values sync to things on those tiles |
+
+### Priority preset buttons
+
+Three architect-tab buttons (not a popup): **negative preset** (default −3), **0**, **positive preset** (default +3). Numbers are drawn on the button icon. Right-click negative/positive to choose ±1–±5 for that slot (persisted in mod settings).
 
 ### Controls
 
@@ -153,6 +159,7 @@ Settings → Set Priority → Thing Priority → Auto Priority Above Cells
 - `UseLowerAsHighPriority` — invert priority sign for scoring and overlay colors
 - `CellSyncMode` — `PeriodicOnly` vs `ImmediateAndPeriodic`
 - `CellSyncIntervalTicks` — default 600
+- `NegativePreset` / `PositivePreset` — Set Priority dialog preset slots (defaults −3 / +3)
 
 ---
 

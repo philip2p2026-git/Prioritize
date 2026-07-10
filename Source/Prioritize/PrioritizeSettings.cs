@@ -11,6 +11,8 @@ internal class PrioritizeSettings : ModSettings
     public bool UseUnsafePatches;
     public CellSyncMode CellSyncMode = CellSyncMode.ImmediateAndPeriodic;
     public int CellSyncIntervalTicks = CellToThingSync.DefaultSyncIntervalTicks;
+    public short NegativePreset = -3;
+    public short PositivePreset = 3;
 
     /// <summary>
     ///     Saving and loading the values
@@ -23,5 +25,7 @@ internal class PrioritizeSettings : ModSettings
         Scribe_Values.Look(ref CellSyncMode, "CellSyncMode", CellSyncMode.ImmediateAndPeriodic);
         Scribe_Values.Look(ref CellSyncIntervalTicks, "CellSyncIntervalTicks",
             CellToThingSync.DefaultSyncIntervalTicks);
+        Scribe_Values.Look(ref NegativePreset, "NegativePreset", (short)-3);
+        Scribe_Values.Look(ref PositivePreset, "PositivePreset", (short)3);
     }
 }

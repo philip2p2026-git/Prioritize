@@ -6,7 +6,9 @@
     <order>35</order>
     <specialDesignatorClasses>
       <li>Prioritize.Designator_PrioritySettings</li>
-      <li>Prioritize.Designator_SetPriority</li>
+      <li>Prioritize.Designator_PriorityPresetNegative</li>
+      <li>Prioritize.Designator_PriorityPresetZero</li>
+      <li>Prioritize.Designator_PriorityPresetPositive</li>
       <li>Prioritize.Designator_Priority_Thing</li>
       <li>Prioritize.Designator_Priority_Cell</li>
     </specialDesignatorClasses>

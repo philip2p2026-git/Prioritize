@@ -20,6 +20,9 @@ public static class MainMod
 
     public static Func<Thing, bool> ThingShowCond = PriorityShowConditions.DefaultCondition.Cond;
 
+    public static bool IsSelectableThing(Thing t) =>
+        ThingShowCond(t) && (t.Faction == null || t.Faction.IsPlayer);
+
     public static PriorityDrawMode PriorityDraw = PriorityDrawMode.None;
 
     public static PriorityDrawMode ForcedDrawMode = PriorityDrawMode.None;

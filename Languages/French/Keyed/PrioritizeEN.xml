@@ -22,7 +22,8 @@
   <P_Designations>Désignations</P_Designations>
   <P_Auto>Auto</P_Auto>
   <P_SelectionOptions>Filtre de priorité</P_SelectionOptions>
-  <P_SelectionOptionsDesc>Filtre pour l'indicateur de priorité de la chose.</P_SelectionOptionsDesc>
+  <P_SelectionOptionsDesc>Filter for Thing Priority designator. Highlights matching things on the map while selected.</P_SelectionOptionsDesc>
   <P_SetPriority>Définir la priorité</P_SetPriority>
-  <P_SetPriorityDesc>Définit la priorité entre -32766~32768.\nSi vous utilisez le désignateur de priorité, cliquez sur ce bouton pour définir la priorité sur 0.</P_SetPriorityDesc>
+  <P_SetPriorityDesc>Three preset buttons: negative, 0, positive. Left-click to apply; right-click negative/positive to choose a preset (±1–±5, saved in mod settings).\nIf you are using a priority designator, click this button to set priority to 0.</P_SetPriorityDesc>
+  <P_PriorityReset>0</P_PriorityReset>
 </LanguageData>

@@ -22,7 +22,8 @@
   <P_Designations>名称</P_Designations>
   <P_Auto>汽车</P_Auto>
   <P_SelectionOptions>事情优先过滤器</P_SelectionOptions>
-  <P_SelectionOptionsDesc>事情优先级代号过滤器。</P_SelectionOptionsDesc>
+  <P_SelectionOptionsDesc>Filter for Thing Priority designator. Highlights matching things on the map while selected.</P_SelectionOptionsDesc>
   <P_SetPriority>设置优先级</P_SetPriority>
-  <P_SetPriorityDesc>在 -32766~32768 之间设置优先级。</P_SetPriorityDesc>
+  <P_SetPriorityDesc>Three preset buttons: negative, 0, positive. Left-click to apply; right-click negative/positive to choose a preset (±1–±5, saved in mod settings).\nIf you are using a priority designator, click this button to set priority to 0.</P_SetPriorityDesc>
+  <P_PriorityReset>0</P_PriorityReset>
 </LanguageData>

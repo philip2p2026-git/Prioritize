@@ -21,7 +21,11 @@
   <P_Designations>Designations</P_Designations>
   <P_Auto>Auto</P_Auto>
   <P_SelectionOptions>Thing priority filter</P_SelectionOptions>
-  <P_SelectionOptionsDesc>Filter for Thing Priority designator.</P_SelectionOptionsDesc>
+  <P_SelectionOptionsDesc>Filter for Thing Priority designator. Highlights matching things on the map while selected.</P_SelectionOptionsDesc>
   <P_SetPriority>Set priority</P_SetPriority>
-  <P_SetPriorityDesc>Sets priority between -32766~32768.\nIf you are using priority designator, click this button to set priority to 0.</P_SetPriorityDesc>
+  <P_SetPriorityDesc>Three preset buttons on the architect bar: negative, 0, positive. Left-click to apply; right-click negative/positive to choose ±1–±5 (saved in mod settings).</P_SetPriorityDesc>
+  <P_PriorityReset>0</P_PriorityReset>
+  <P_PriorityNegativeDesc>Left-click to select this negative priority. Right-click to choose a preset (−1 to −5).</P_PriorityNegativeDesc>
+  <P_PriorityZeroDesc>Left-click to set priority to 0.</P_PriorityZeroDesc>
+  <P_PriorityPositiveDesc>Left-click to select this positive priority. Right-click to choose a preset (+1 to +5).</P_PriorityPositiveDesc>
 </LanguageData>

@@ -25,9 +25,6 @@ public class Designator_Priority_Thing : Designator
     {
         get
         {
-            yield return new FloatMenuOption("Priority".Translate(),
-                delegate { Find.WindowStack.Add(new Dialog_SelectPriority()); });
-
             yield return new FloatMenuOption("Options".Translate(),
                 PriorityShowConditions.ShowConditionsMenuBox, MenuOptionPriority.High);
         }
@@ -55,7 +52,7 @@ public class Designator_Priority_Thing : Designator
 
     public override AcceptanceReport CanDesignateThing(Thing t)
     {
-        return MainMod.ThingShowCond(t) && (t.Faction == null || t.Faction.IsPlayer);
+        return MainMod.IsSelectableThing(t);
     }
 
     public override void DesignateSingleCell(IntVec3 c)
