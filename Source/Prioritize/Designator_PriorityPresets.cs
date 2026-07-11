@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -7,27 +8,43 @@ namespace Prioritize;
 
 public abstract class Designator_PriorityPresetBase : Designator
 {
-    protected Designator_PriorityPresetBase()
-    {
-        icon = MainMod.ShowPriority;
-    }
-
     protected abstract short GetPresetValue();
 
     protected virtual bool AllowPresetMenu => false;
 
     protected virtual bool NegativeMenu => false;
 
+    public override IEnumerable<FloatMenuOption> RightClickFloatMenuOptions
+    {
+        get
+        {
+            if (!AllowPresetMenu)
+            {
+                yield break;
+            }
+
+            foreach (var option in PriorityPresetMenu.Options(NegativeMenu))
+            {
+                yield return option;
+            }
+        }
+    }
+
+    public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
+    {
+        var result = base.GizmoOnGUI(topLeft, maxWidth, parms);
+        if (AllowPresetMenu)
+        {
+            Designator_Dropdown.DrawExtraOptionsIcon(topLeft, GetWidth(maxWidth));
+        }
+
+        return result;
+    }
+
     public override void ProcessInput(Event ev)
     {
         if (!CheckCanInteract())
         {
-            return;
-        }
-
-        if (AllowPresetMenu && ev.button == 1)
-        {
-            PriorityPresetMenu.Show(NegativeMenu);
             return;
         }
 
@@ -45,6 +62,7 @@ public class Designator_PriorityPresetNegative : Designator_PriorityPresetBase
 {
     public Designator_PriorityPresetNegative()
     {
+        icon = ContentFinder<Texture2D>.Get("UI/Prioritize/PriorityLower");
         defaultDesc = "P_PriorityNegativeDesc".Translate();
     }
 
@@ -61,6 +79,7 @@ public class Designator_PriorityPresetZero : Designator_PriorityPresetBase
 {
     public Designator_PriorityPresetZero()
     {
+        icon = ContentFinder<Texture2D>.Get("UI/Prioritize/PriorityFlat");
         defaultDesc = "P_PriorityZeroDesc".Translate();
     }
 
@@ -73,6 +92,7 @@ public class Designator_PriorityPresetPositive : Designator_PriorityPresetBase
 {
     public Designator_PriorityPresetPositive()
     {
+        icon = ContentFinder<Texture2D>.Get("UI/Prioritize/PriorityUpper");
         defaultDesc = "P_PriorityPositiveDesc".Translate();
     }
 
