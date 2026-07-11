@@ -158,8 +158,8 @@ public static class PriorityWorkIndex
             return PriorityScannerGroup.Mining;
         }
 
-        if (desMgr.DesignationAt(thing.Position, DesignationDefOf.CutPlant) != null ||
-            desMgr.DesignationAt(thing.Position, DesignationDefOf.HarvestPlant) != null)
+        if (desMgr.DesignationOn(thing, DesignationDefOf.CutPlant) != null ||
+            desMgr.DesignationOn(thing, DesignationDefOf.HarvestPlant) != null)
         {
             return PriorityScannerGroup.Growing;
         }
@@ -183,7 +183,7 @@ public static class PriorityWorkIndex
             return PriorityScannerGroup.SmoothFloor;
         }
 
-        if (desMgr.DesignationAt(thing.Position, DesignationDefOf.Deconstruct) != null)
+        if (desMgr.DesignationOn(thing, DesignationDefOf.Deconstruct) != null)
         {
             return PriorityScannerGroup.Deconstruct;
         }
